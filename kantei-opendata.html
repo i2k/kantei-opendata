@@ -1,0 +1,274 @@
+<!DOCTYPE HTML PUBLIC '-//W3C//DTD HTML 4.01 Transitional//EN'>
+<html lang=ja>
+
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+<meta http-equiv='Content-Script-Type' content='text/javascript'>
+<meta http-equiv='Content-Style-Type' content='text/css'>
+<meta name='author' content='Yuki Naito'>
+<title>difff《ﾃﾞｭﾌﾌ》</title>
+<script type='text/javascript'>
+<!--
+	function hideForm() {
+		if (document.getElementById('form').style.display == 'none') {
+			document.getElementById('top' ).style.display = 'block';
+			document.getElementById('form').style.display = 'block';
+			document.getElementById('hide').value = '結果のみ表示 (印刷用)';
+		} else {
+			document.getElementById('top' ).style.display = 'none';
+			document.getElementById('form').style.display = 'none';
+			document.getElementById('hide').value = '全体を表示';
+		}
+	}
+	function setColor1() {
+		document.getElementById('top').style.borderTop = '5px solid #00BBFF';
+		var emList = document.getElementsByTagName('em');
+		for (i = 0; i < emList.length; i++) {
+			emList[i].className = 'blue' ;
+		}
+	}
+	function setColor2() {
+		document.getElementById('top').style.borderTop = '5px solid #00bb00';
+		var emList = document.getElementsByTagName('em');
+		for (i = 0; i < emList.length; i++) {
+			emList[i].className = 'green' ;
+		}
+	}
+	function setColor3() {
+		document.getElementById('top').style.borderTop = '5px solid black';
+		var emList = document.getElementsByTagName('em');
+		for (i = 0; i < emList.length; i++) {
+			emList[i].className = 'black' ;
+		}
+	}
+//-->
+</script>
+<style type='text/css'>
+<!--
+	* { font-family:verdana,arial,helvetica,sans-serif; }
+	p,table,textarea,ul { font-size:10pt }
+	textarea { width:100% }
+	a  { color:#3366CC }
+	.k { color:black; text-decoration:none }
+	em { font-style:normal }
+	em,
+	.blue  { font-weight:bold; color:black; background:#99EEFF; border:1px solid #00BBFF }
+	.green { font-weight:bold; color:black; background:#99FF99; border:none }
+	.black { font-weight:bold; color:white; background:black;   border:none }
+	table {
+		width:95%;
+		margin:20px;
+		table-layout:fixed;
+		word-wrap:break-word;
+		border-collapse:collapse;
+	}
+	td {
+		padding:4px 15px;
+		border-left:solid 1px silver;
+		border-right:solid 1px silver;
+	}
+	.n { border:none }
+-->
+</style>
+</head>
+
+<body>
+
+<div id='top' style='border-top:5px solid #00BBFF; padding-top:10px'>
+<font size=5>
+	<a class=k href='http://difff.jp/'>
+	テキスト比較ツール difff《ﾃﾞｭﾌﾌ》</a></font><!--
+--><font size=3>ver.6</font>
+&emsp;
+<font size=1 style='vertical-align:top'>
+	<a style='vertical-align:top' href='http://difff.jp/en/'>English</a> |
+	Japanese
+</font>
+&emsp;
+<font size=1 style='vertical-align:top'>
+<a style='vertical-align:top' href='http://difff.jp/v5/'>旧バージョン</a>
+</font>
+<hr><!-- ________________________________________ -->
+</div>
+
+<div id='form'>
+<p>下の枠に比較したい文章を入れてくだちい。差分 (diff) を表示します。</p>
+
+<form method=POST action='http://difff.jp/'>
+<table cellspacing=0>
+<tr>
+	<td class=n><textarea name=sequenceA rows=20>平成25年6月14日閣議決定
+
+1 公共データの民間開放（オープンデータ）の推進
+
+公共データについては、オープン化を原則とする発想の転換を行い、ビジネスや官民協働のサービスでの利用がしやすいように、政府、独立行政法人、地方公共団体等が保有する多様で膨大なデータを、機械判読に適したデータ形式で、営利目的も含め自由な編集・加工等を認める利用ルールの下、インターネットを通じて公開する。
+
+このため、速やかに電子行政オープンデータ戦略に基づくロードマップを策定・公表するほか、2013年度から、公共データの自由な二次利用を認める利用ルールの見直しを行うとともに、機械判読に適した国際標準データ形式での公開の拡大に取り組む。また、各府省庁が公開する公共データの案内・横断的検索を可能とするデータカタログサイトについて、2013年度中に試行版を立ち上げ、広く国民の意見募集を行うとともに、2014年度から本格運用を実施する。あわせて、データの組み合わせや横断的利用を容易とする共通の語彙（ボキャブラリ）の基盤構築にも取り組む。
+
+2014年度及び2015年度の2年間を集中取組期間と位置づけ、2015年度末には、他の先進国と同水準の公開内容を実現する。
+
+また、公共データの利用促進のために、コンテスト手法の活用等により、利用ニーズの発掘・喚起、利活用モデルの構築・展開やデータを活用する高度な人材育成にも積極的に取り組み、新ビジネス・新サービスの創出を支援する。
+
+【KPI】
+・各府省庁のオープンデータ達成状況
+・データカタログに掲載されるデータセットの数、アクセス数・ダウンロード数
+・オープンデータを活用して開発されたアプリケーションの数</textarea></td>
+	<td class=n><textarea name=sequenceB rows=20>平成26年6月24日閣議決定
+
+1 公共データの民間開放（オープンデータ）の推進
+
+公共データについては、オープン化を原則とする発想の転換を行い、ビジネスや官民協働のサービスでの利用がしやすいように、政府、独立行政法人、地方公共団体等が保有する多様で膨大なデータを、機械判読に適したデータ形式で、営利目的も含め自由な編集・加工等を認める利用ルールの下、インターネットを通じて公開する。
+
+このため、電子行政オープンデータ推進のためのロードマップを踏まえ、2013年度から、公共データの自由な二次利用を認める利用ルールの見直しを行うとともに、機械判読に適した国際標準データ形式での公開の拡大に取り組む。また、各府省庁が公開する公共データの案内・横断的検索を可能とするデータカタログサイトについて、2013年度中に試行版を立ち上げ、広く国民の意見募集を行い、2014年度から本格運用を開始し、民間のニーズ等を踏まえ、当該サイトの掲載データを充実させる。あわせて、データの組み合わせや横断的利用を容易とする共通の語彙（ボキャブラリ）の基盤構築にも取り組む。さらに、各府省庁のWebサイトで提供するデータベースについて、API機能の整備を利用ニーズの高いものから優先的に進め、政府等で提供するAPIを紹介し、その機能や利用方法を解説するAPIの総合カタログを提供する。
+
+2014年度及び2015年度の2年間を集中取組期間と位置づけ、2015年度末には、他の先進国と同水準の公開内容を実現する。
+
+地方公共団体については、その保有する公共データ等の流通・連携・利活用を効果的に行うための技術の開発・実証、観光等の公共データを一元的にオープン化する基盤の構築、地方公共団体における取組に関する考え方の整理等により、オープンデータの取組を促進する。
+
+また、公共データの利用促進のために、コンテスト手法の活用、活用事例集の作成等により、利用ニーズの発掘・喚起、利活用モデルの構築・展開やデータを活用する高度な人材育成にも積極的に取り組み、新ビジネス・新サービスの創出を支援する。
+
+【KPI】
+・各府省庁のオープンデータ達成状況
+・データカタログに掲載されるデータセットの数、アクセス数・ダウンロード数
+・オープンデータを活用して開発されたアプリケーションの数</textarea></td>
+</tr>
+</table>
+
+<p><input type=submit value='比較する'></p>
+</form>
+</div>
+
+<div id='result'>
+<table cellspacing=0>
+<tr>
+	<td>平成2<em>5</em>年6月<em>1</em>4日閣議決定
+</td>
+	<td>平成2<em>6</em>年6月<em>2</em>4日閣議決定
+</td>
+</tr>
+<tr>
+	<td>
+</td>
+	<td>
+</td>
+</tr>
+<tr>
+	<td>1 公共データの民間開放（オープンデータ）の推進
+</td>
+	<td>1 公共データの民間開放（オープンデータ）の推進
+</td>
+</tr>
+<tr>
+	<td>
+</td>
+	<td>
+</td>
+</tr>
+<tr>
+	<td>公共データについては、オープン化を原則とする発想の転換を行い、ビジネスや官民協働のサービスでの利用がしやすいように、政府、独立行政法人、地方公共団体等が保有する多様で膨大なデータを、機械判読に適したデータ形式で、営利目的も含め自由な編集・加工等を認める利用ルールの下、インターネットを通じて公開する。
+</td>
+	<td>公共データについては、オープン化を原則とする発想の転換を行い、ビジネスや官民協働のサービスでの利用がしやすいように、政府、独立行政法人、地方公共団体等が保有する多様で膨大なデータを、機械判読に適したデータ形式で、営利目的も含め自由な編集・加工等を認める利用ルールの下、インターネットを通じて公開する。
+</td>
+</tr>
+<tr>
+	<td>
+</td>
+	<td>
+</td>
+</tr>
+<tr>
+	<td>このため、<em>速やかに</em>電子行政オープンデータ<em>戦略に基づく</em>ロードマップを<em>策定・公表するほか</em>、2013年度から、公共データの自由な二次利用を認める利用ルールの見直しを行うとともに、機械判読に適した国際標準データ形式での公開の拡大に取り組む。また、各府省庁が公開する公共データの案内・横断的検索を可能とするデータカタログサイトについて、2013年度中に試行版を立ち上げ、広く国民の意見募集を行<em>うとともに</em>、2014年度から本格運用を実<em>施す</em>る。あわせて、データの組み合わせや横断的利用を容易とする共通の語彙（ボキャブラリ）の基盤構築にも取り組む。
+</td>
+	<td>このため、電子行政オープンデータ<em>推進のための</em>ロードマップを<em>踏まえ</em>、2013年度から、公共データの自由な二次利用を認める利用ルールの見直しを行うとともに、機械判読に適した国際標準データ形式での公開の拡大に取り組む。また、各府省庁が公開する公共データの案内・横断的検索を可能とするデータカタログサイトについて、2013年度中に試行版を立ち上げ、広く国民の意見募集を行<em>い</em>、2014年度から本格運用を<em>開始し、民間のニーズ等を踏まえ、当該サイトの掲載データを充</em>実<em>させ</em>る。あわせて、データの組み合わせや横断的利用を容易とする共通の語彙（ボキャブラリ）の基盤構築にも取り組む。<em>さらに、各府省庁のWebサイトで提供するデータベースについて、API機能の整備を利用ニーズの高いものから優先的に進め、政府等で提供するAPIを紹介し、その機能や利用方法を解説するAPIの総合カタログを提供する。</em>
+</td>
+</tr>
+<tr>
+	<td>
+</td>
+	<td>
+</td>
+</tr>
+<tr>
+	<td>2014年度及び2015年度の2年間を集中取組期間と位置づけ、2015年度末には、他の先進国と同水準の公開内容を実現する。
+</td>
+	<td>2014年度及び2015年度の2年間を集中取組期間と位置づけ、2015年度末には、他の先進国と同水準の公開内容を実現する。
+</td>
+</tr>
+<tr>
+	<td>
+</td>
+	<td>
+</td>
+</tr>
+<tr>
+	<td></td>
+	<td><em>地方公共団体については、その保有する公共データ等の流通・連携・利活用を効果的に行うための技術の開発・実証、観光等の公共データを一元的にオープン化する基盤の構築、地方公共団体における取組に関する考え方の整理等により、オープンデータの取組を促進する。
+</em></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td>また、公共データの利用促進のために、コンテスト手法の活用等により、利用ニーズの発掘・喚起、利活用モデルの構築・展開やデータを活用する高度な人材育成にも積極的に取り組み、新ビジネス・新サービスの創出を支援する。
+</td>
+	<td>また、公共データの利用促進のために、コンテスト手法の活用<em>、活用事例集の作成</em>等により、利用ニーズの発掘・喚起、利活用モデルの構築・展開やデータを活用する高度な人材育成にも積極的に取り組み、新ビジネス・新サービスの創出を支援する。
+</td>
+</tr>
+<tr>
+	<td>
+</td>
+	<td>
+</td>
+</tr>
+<tr>
+	<td>【KPI】
+</td>
+	<td>【KPI】
+</td>
+</tr>
+<tr>
+	<td>・各府省庁のオープンデータ達成状況
+</td>
+	<td>・各府省庁のオープンデータ達成状況
+</td>
+</tr>
+<tr>
+	<td>・データカタログに掲載されるデータセットの数、アクセス数・ダウンロード数
+</td>
+	<td>・データカタログに掲載されるデータセットの数、アクセス数・ダウンロード数
+</td>
+</tr>
+<tr>
+	<td>・オープンデータを活用して開発されたアプリケーションの数</td>
+	<td>・オープンデータを活用して開発されたアプリケーションの数</td>
+</tr>
+<tr>
+	<td><font color=gray>
+		文字数: 704<br>
+		空白数: 1 空白込み文字数: 705<br>
+		改行数: 15 改行込み文字数: 720<br>
+		単語数: 11
+	</font></td>
+	<td><font color=gray>
+		文字数: 956<br>
+		空白数: 1 空白込み文字数: 957<br>
+		改行数: 17 改行込み文字数: 974<br>
+		単語数: 12
+	</font></td>
+</tr>
+</table>
+
+<p>
+	<input type=button id='hide' value='結果のみ表示 (印刷用)' onclick='hideForm()'> |
+	<input type=radio name=color value=1 onclick='setColor1()' checked>
+		<span class=blue >カラー1</span>
+	<input type=radio name=color value=2 onclick='setColor2()'>
+		<span class=green>カラー2</span>
+	<input type=radio name=color value=3 onclick='setColor3()'>
+		<span class=black>モノクロ</span>
+</p>
+</div>
+
+</body>
+</html>
